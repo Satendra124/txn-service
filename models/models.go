@@ -31,7 +31,7 @@ type CreateTransactionSuccessResponse struct {
 
 type CreateAccountRequest struct {
 	AccountID      int64  `json:"account_id" validate:"required,gt=0"`
-	InitialBalance string `json:"balance" validate:"required"`
+	InitialBalance string `json:"initial_balance" validate:"required"`
 }
 
 type CreateTransactionRequest struct {

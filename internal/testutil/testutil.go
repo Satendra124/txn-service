@@ -160,7 +160,7 @@ func (ts *TestServer) CreateTestAccount(t *testing.T, accountID int64, balance s
 	t.Helper()
 
 	url := fmt.Sprintf("%s/accounts", ts.Server.URL)
-	payload := fmt.Sprintf(`{"account_id": %d, "balance": "%s"}`, accountID, balance)
+	payload := fmt.Sprintf(`{"account_id": %d, "initial_balance": "%s"}`, accountID, balance)
 
 	req, err := http.NewRequest("POST", url, strings.NewReader(payload))
 	require.NoError(t, err)

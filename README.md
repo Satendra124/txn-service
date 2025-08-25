@@ -39,15 +39,19 @@ POST Accounts:
 curl --location --request POST 'http://localhost:8080/accounts' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "account_id": 1,
-    "balance": 100
+    "account_id": 123,
+    "initial_balance": "100.23344"
 }'
 ```
 
 POST Transactions:
 
 ```bash
-curl -X POST http://localhost:8080/transactions -H "Content-Type: application/json" -d '{"source_account_id": 1, "destination_account_id": 2, "amount": 100}'
+curl -X POST http://localhost:8080/transactions -H "Content-Type: application/json" -d '{
+    "source_account_id": 123,
+    "destination_account_id": 456,
+    "amount": "100.12345"
+}'
 ```
 
 ### Testing
